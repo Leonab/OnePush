@@ -18,21 +18,28 @@
 </head>
 
 <body layout="column" ng-controller="TopGit">
+
     <md-toolbar layout="row">
         <div class="md-toolbar">
-            <h1> <i class="material-icons md-48">face</i> OnePush</h1>
+            <h1><i class="material-icons md-48">face</i> OnePush</h1>
         </div>
         <md-button ng-click="toggleSidenav('left')" hide-gt-sm class="md-icon-button">
             <md-icon aria-label="Menu" md-svg-icon="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg"></md-icon>
         </md-button>
     </md-toolbar>
+	
     <div layout="row" flex>
+	
         <md-sidenav layout="column" class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm')">
-            <md-slider-container>
+            
+			<md-slider-container>
+			
                 <md-toolbar class="md-theme-indigo">
                     <h1 class="md-toolbar-tools">Contribute/Add Website</h1>
                 </md-toolbar>
+				
                 <br>
+				
 				<md-input-container>
                    <label>Title:</label><input type="text" name="firstName" ng-model="title" required />
 				</md-input-container>
@@ -50,12 +57,15 @@
 
 
         <div layout="column" flex id="content">
+		
             <md-content layout="column" flex class="md-padding">
+			
                 <md-input-container class="md-block">
                     <!-- Use floating placeholder instead of label -->
                     <i class="material-icons">search</i>
                     <input ng-model="search" ng-model-options="{ debounce: 800 }" onclick="select()" placeholder="search (by name, tag, url)" class="form-control" autofocus>
                 </md-input-container>
+				
                 <br><br>             
                 
                 <h2><strong>Found total:</strong> {{details.websites.length}}</h2>
@@ -87,8 +97,6 @@
     </div>
 	
 	
-
-
 
 
 
